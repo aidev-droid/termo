@@ -1,0 +1,6 @@
+{
+  "name": "Resource Advisor",
+  "description": "Windows Process and System Resource Advisor utility with rule engine, process snapshots, evidence-based safety recommendations, and PID-reuse protection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

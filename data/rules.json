@@ -1,0 +1,125 @@
+{
+  "version": "1.0.0",
+  "identities": [
+    {
+      "id": "rule-chrome",
+      "matchType": "PublisherAndFileName",
+      "publisher": "Google LLC",
+      "fileName": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "displayName": "Google Chrome",
+      "category": "Browser",
+      "closePolicy": "UserApplication",
+      "impact": "Browser windows and active tabs will close. Unsaved web forms may be lost.",
+      "priority": 100
+    },
+    {
+      "id": "rule-msedge",
+      "matchType": "PublisherAndFileName",
+      "publisher": "Microsoft Corporation",
+      "fileName": "msedge.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "displayName": "Microsoft Edge",
+      "category": "Browser",
+      "closePolicy": "UserApplication",
+      "impact": "Edge browser windows and active web pages will close.",
+      "priority": 100
+    },
+    {
+      "id": "rule-code",
+      "matchType": "PublisherAndFileName",
+      "publisher": "Microsoft Corporation",
+      "fileName": "Code.exe",
+      "path": "C:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "displayName": "Visual Studio Code",
+      "category": "Developer Tool",
+      "closePolicy": "UserApplication",
+      "impact": "VS Code editor windows will close. Unsaved code changes may be lost.",
+      "priority": 100
+    },
+    {
+      "id": "rule-discord",
+      "matchType": "PublisherAndFileName",
+      "publisher": "Discord Inc.",
+      "fileName": "Discord.exe",
+      "path": "C:\\Users\\User\\AppData\\Local\\Discord\\app-1.0.9000\\Discord.exe",
+      "displayName": "Discord",
+      "category": "Communication",
+      "closePolicy": "UserApplication",
+      "impact": "Voice chat and active voice calls will terminate.",
+      "priority": 90
+    },
+    {
+      "id": "rule-spotify",
+      "matchType": "PublisherAndFileName",
+      "publisher": "Spotify Ltd",
+      "fileName": "Spotify.exe",
+      "path": "C:\\Users\\User\\AppData\\Roaming\\Spotify\\Spotify.exe",
+      "displayName": "Spotify Music",
+      "category": "Media Player",
+      "closePolicy": "UserApplication",
+      "impact": "Audio playback will stop immediately.",
+      "priority": 90
+    },
+    {
+      "id": "rule-defender",
+      "matchType": "ExactSigned",
+      "publisher": "Microsoft Windows Publisher",
+      "fileName": "MsMpEng.exe",
+      "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.23050.5-0\\MsMpEng.exe",
+      "displayName": "Microsoft Defender Antivirus Service",
+      "category": "System Security",
+      "closePolicy": "ProtectedSystem",
+      "impact": "CRITICAL: Terminating real-time malware protection exposes the system to security threats.",
+      "priority": 200
+    },
+    {
+      "id": "rule-csrss",
+      "matchType": "KnownPathAndFileName",
+      "publisher": "Microsoft Windows",
+      "fileName": "csrss.exe",
+      "path": "C:\\Windows\\System32\\csrss.exe",
+      "displayName": "Client Server Runtime Process",
+      "category": "Critical Windows Kernel Subsystem",
+      "closePolicy": "ProtectedSystem",
+      "impact": "FATAL: Terminating csrss.exe will trigger an immediate Windows System BSOD Crash.",
+      "priority": 300
+    },
+    {
+      "id": "rule-lsass",
+      "matchType": "KnownPathAndFileName",
+      "publisher": "Microsoft Windows",
+      "fileName": "lsass.exe",
+      "path": "C:\\Windows\\System32\\lsass.exe",
+      "displayName": "Local Security Authority Subsystem Service",
+      "category": "Critical Security Service",
+      "closePolicy": "ProtectedSystem",
+      "impact": "FATAL: Security subsystem shutdown causes immediate user logoff and reboot.",
+      "priority": 300
+    },
+    {
+      "id": "rule-svchost",
+      "matchType": "KnownPathAndFileName",
+      "publisher": "Microsoft Windows",
+      "fileName": "svchost.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "displayName": "Host Process for Windows Services",
+      "category": "Windows Core Service Host",
+      "closePolicy": "ProtectedSystem",
+      "impact": "System services (Network, Audio, Event Log) hosted in this instance will fail.",
+      "priority": 250
+    },
+    {
+      "id": "rule-steam",
+      "matchType": "PublisherAndFileName",
+      "publisher": "Valve Corp.",
+      "fileName": "steam.exe",
+      "path": "C:\\Program Files (x86)\\Steam\\steam.exe",
+      "displayName": "Steam Client",
+      "category": "Game Launcher",
+      "closePolicy": "UserApplication",
+      "impact": "Steam client will exit. Active downloads or game syncing will pause.",
+      "priority": 80
+    }
+  ]
+}
